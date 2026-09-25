@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/estatesales-net",
   "title": "Estatesales Net",
   "description": "EstateSales.NET MCP — upcoming estate sales, by ZIP",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/estatesales-net",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-estatesales-net",
