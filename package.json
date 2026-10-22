@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-estatesales-net",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "EstateSales.NET MCP — upcoming estate sales, by ZIP",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-aec0479248f5649dddf027d206e50a657ade7607151931fab7c47fa864a94248",
-    "sourceCommit": "4fa4c64448be06f4a2ee4cee19f756f3558a7cad"
+    "sourceHash": "v1-590d0f386251b574d148a0a231515c03fcd731083c41df4629212adc8f36f723",
+    "sourceCommit": "712a5e0171ea24483214329d0cd7efdfd9b80352"
   }
 }
