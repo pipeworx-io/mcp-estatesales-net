@@ -1,0 +1,66 @@
+[
+  {
+    "name": "estatesales_search",
+    "description": "Upcoming estate sales, moving sales and estate auctions near a US ZIP code, from EstateSales.NET — the largest US estate-sale listing site. Returns each sale's ID, city/state/ZIP, coordinates, distance from the ZIP, sale type (on-site estate sale, moved offsite, online auction), start and end dates, and whether it runs today or tomorrow. These are UPCOMING sale listings, not sold prices — EstateSales.NET publishes no hammer prices.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "postal_code": {
+          "type": "string",
+          "description": "US ZIP code, e.g. \"64111\". The site resolves it to its city page."
+        },
+        "state_code": {
+          "type": "string",
+          "description": "Optional 2-letter state code, e.g. \"MO\". Only needed to disambiguate; the ZIP alone normally resolves."
+        },
+        "city": {
+          "type": "string",
+          "description": "Optional city name, e.g. \"Kansas City\". Normally unnecessary — the ZIP resolves it."
+        }
+      },
+      "required": [
+        "postal_code"
+      ]
+    }
+  },
+  {
+    "name": "estatesales_sale",
+    "description": "One EstateSales.NET sale in full, by sale ID: name, description, terms, sale type, every scheduled date/time, coordinates, picture count, and the company or seller running it with their phone and page. The street address is included only once EstateSales.NET has published it — estate sales are usually at a private home and the site holds the address back until shortly before the sale.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sale_id": {
+          "type": "number",
+          "description": "EstateSales.NET sale ID, e.g. 5065767 (the `id` from estatesales_search)"
+        }
+      },
+      "required": [
+        "sale_id"
+      ]
+    }
+  },
+  {
+    "name": "estatesales_companies",
+    "description": "Estate-sale companies operating near a US ZIP code, as listed on EstateSales.NET: company name, business address, phone, coordinates and their EstateSales.NET page. Answers \"who runs estate sales in this area\" — for hiring one, or for tracing which company is behind a sale found via estatesales_search.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "postal_code": {
+          "type": "string",
+          "description": "US ZIP code, e.g. \"64111\""
+        },
+        "state_code": {
+          "type": "string",
+          "description": "Optional 2-letter state code, e.g. \"MO\""
+        },
+        "city": {
+          "type": "string",
+          "description": "Optional city name, e.g. \"Kansas City\""
+        }
+      },
+      "required": [
+        "postal_code"
+      ]
+    }
+  }
+]

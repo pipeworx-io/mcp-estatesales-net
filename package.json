@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-estatesales-net",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "EstateSales.NET MCP — upcoming estate sales, by ZIP",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-estatesales-net": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "estatesales-net"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-estatesales-net.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/estatesales-net",
   "pipeworx": {
-    "sourceHash": "v1-f5f8b1e673d5ac9763717512bd0efa6d975650215c784cc7fe2ad86630736261",
-    "sourceCommit": "722087a9bda73f85942e8f6bbfd598544cb0d490"
+    "mode": "gateway",
+    "slug": "estatesales-net",
+    "gatewaySlug": "estatesales-net",
+    "sourceHash": "v1-cea33a1d30d4d0372376e85aa01acb836d49b54be3ba40f5291ce1313659e738",
+    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
   }
 }
