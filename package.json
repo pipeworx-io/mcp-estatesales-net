@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-estatesales-net",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "EstateSales.NET MCP — upcoming estate sales, by ZIP",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "estatesales-net",
     "gatewaySlug": "estatesales-net",
-    "sourceHash": "v1-cea33a1d30d4d0372376e85aa01acb836d49b54be3ba40f5291ce1313659e738",
-    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
+    "sourceHash": "v1-ad2e4cb1d17f327dfbd47b2e5d9a26ccaef1926c3cea7c37a4af9b30ffa7fa30",
+    "sourceCommit": "d35e32c1ffe988e24d391dedb35666387fd2b3d6"
   }
 }
